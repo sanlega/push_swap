@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 19:31:53 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/12 19:59:33 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/12 21:57:32 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,51 @@
 
 t_stack	*ft_newstack(int content)
 {
-	t_stack	*n;
+	t_stack	*newnode;
 
-	n = (t_stack *)malloc(sizeof(t_stack));
-	if (!n)
+	newnode = (t_stack *)malloc(sizeof(t_stack));
+	if (!newnode)
 		return (NULL);
-	n->content = content;
-	n->index = 0;
-	n->next = NULL;
-	return (n);
+	newnode->content = content;
+	newnode->index = 0;
+	newnode->next = NULL;
+	return (newnode);
 }
 
-void	ft_lstadd_back(t_stack **lst, t_stack *new)
+void	ft_lstaddback(t_stack **lst, t_stack *newer)
 {
 	t_stack	*end;
 
 	if (!*lst)
 	{
-		*lst = new;
+		*lst = newer;
 		return ;
 	}
-	end = ft_lstlast(*lst);
-	end->next = new;
+	end = ft_lst_last(*lst);
+	end->next = newer;
+}
+
+t_stack	*ft_lst_last(t_stack *lst)
+{
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+	}
+	return (lst);
+}
+
+void	ft_printlist(t_stack **list)
+{
+	while (*list)
+	{
+		ft_printf("Num: %d\n", (*list)->content);
+		(*list)= (*list)->next;
+	}
+}
+
+void	ft_print_lst_content(t_stack *node)
+{
+	printf("%d\n", node->content);
 }

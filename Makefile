@@ -6,14 +6,16 @@
 #    By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/22 04:46:35 by slegaris          #+#    #+#              #
-#    Updated: 2023/10/12 17:29:35 by slegaris         ###   ########.fr        #
+#    Updated: 2023/10/12 21:31:14 by slegaris         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRCS = main.c\
-	   utils.c\
+SRC_DIR = src
+
+SRCS = $(SRC_DIR)/main.c\
+	   $(SRC_DIR)/lists.c\
 	   
 OBJS = $(SRCS:.c=.o)
 
@@ -21,7 +23,7 @@ LIBFT = libft
 LIBFT_LIB = $(LIBFT)/libft.a
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address
 
 all: $(NAME)
 
