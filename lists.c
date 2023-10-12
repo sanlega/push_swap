@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   lists.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 17:30:33 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/12 19:28:45 by slegaris         ###   ########.fr       */
+/*   Created: 2023/10/12 19:31:53 by slegaris          #+#    #+#             */
+/*   Updated: 2023/10/12 19:59:33 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft/libft.h"
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stdlib.h>
-
-typedef struct s_stack
+t_stack	*ft_newstack(int content)
 {
-	int content;
-	int index;
-	struct s_stack *next;
-} t_stack;
+	t_stack	*n;
 
+	n = (t_stack *)malloc(sizeof(t_stack));
+	if (!n)
+		return (NULL);
+	n->content = content;
+	n->index = 0;
+	n->next = NULL;
+	return (n);
+}
 
-#endif
+void	ft_lstadd_back(t_stack **lst, t_stack *new)
+{
+	t_stack	*end;
+
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	end = ft_lstlast(*lst);
+	end->next = new;
+}
