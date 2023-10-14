@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:33 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/12 21:58:54 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/14 17:28:19 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,17 @@
 
 typedef struct s_stack
 {
-	int content;
+	t_core content;
 	int index;
 	struct s_stack *next;
 } t_stack;
 
-t_stack	*ft_newstack(int content);
+t_stack	*ft_newstack(void *content);
 void	ft_lstaddback(t_stack **lst, t_stack *newer);
 t_stack	*ft_lst_last(t_stack *lst);
 void	ft_printlist(t_stack **list);
 void	ft_print_lst_content(t_stack *node);
+int		check_list(t_stack *lst);
+void    lets_order(t_stack *lst);
 
 #endif

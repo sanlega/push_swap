@@ -6,7 +6,7 @@
 #    By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/22 04:46:35 by slegaris          #+#    #+#              #
-#    Updated: 2023/10/12 21:31:14 by slegaris         ###   ########.fr        #
+#    Updated: 2023/10/13 20:58:18 by slegaris         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,11 @@ NAME = push_swap
 
 SRC_DIR = src
 
-SRCS = $(SRC_DIR)/main.c\
-	   $(SRC_DIR)/lists.c\
-	   
+SRCS =	$(SRC_DIR)/main.c\
+		$(SRC_DIR)/lists.c\
+		$(SRC_DIR)/checkers.c\
+		$(SRC_DIR)/order.c\
+
 OBJS = $(SRCS:.c=.o)
 
 LIBFT = libft
