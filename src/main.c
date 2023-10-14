@@ -6,12 +6,12 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:09 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/12 22:07:04 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/14 17:49:29 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
-#include "push_swap.h"
+#include "../include/push_swap.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -51,7 +51,7 @@ int	ft_isnumber(char *argv)
 int	main(int argc, char **argv)
 {
 	int i = 1;
-	t_stack *list;
+	t_stack *lst;
 
 	// ft_printf("Cantidad de Numeros: %d\n\n", argc-1);
 	if (argc <= 2)
@@ -65,8 +65,9 @@ int	main(int argc, char **argv)
 		}
 		i++;
 	}
-	list = makelist(argv +1);
-	check_list(list);
-	ft_printlist(&list);
+	lst = makelist(argv +1);
+	if (check_list(lst))
+		lets_order(lst);
+	// ft_printlist(&lst);
 	return(0);
 }
