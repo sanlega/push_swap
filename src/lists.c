@@ -6,13 +6,13 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 19:31:53 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/14 17:22:52 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/12 21:57:32 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
-t_stack	*ft_newstack(void *content)
+t_stack	*ft_newstack(int content)
 {
 	t_stack	*newnode;
 
