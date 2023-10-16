@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:09 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/14 17:49:29 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:16:30 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,35 +32,19 @@ t_stack *makelist(char **numbers)
 	return (stack);
 }
 
-int	ft_isnumber(char *argv)
-{
-	int i;
-
-	i = 0;
-	if ((argv[i] == '-' || argv[i] == '+') && argv[i+1] != '\0')
-		i++;
-	while (argv[i])
-	{
-		if(!ft_isdigit(argv[i]))
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
 int	main(int argc, char **argv)
 {
 	int i = 1;
 	t_stack *lst;
 
 	// ft_printf("Cantidad de Numeros: %d\n\n", argc-1);
-	if (argc <= 2)
+	if (argc < 2 && ft_isnumber(&argv[1][0]))
 		exit(0);
 	while(i != argc)
 	{
 		if (!ft_isnumber(argv[i]))
 		{
-			ft_putstr_fd("ERROR\n", 2);
+			ft_putstr_fd("Error\n", 2);
 			exit(EXIT_FAILURE);
 		}
 		i++;

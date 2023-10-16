@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 20:16:08 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/14 17:42:55 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:15:13 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int    check_list(t_stack *lst)
 {
     if (is_repeated(lst))
     {
-       ft_putstr_fd("ERROR\n", 2);
+       ft_putstr_fd("Error\n", 2);
        exit(EXIT_FAILURE);
     }
     if (is_ordered(lst))
