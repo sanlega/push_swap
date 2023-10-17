@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 19:31:53 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/14 17:33:07 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/17 21:36:21 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,16 +49,15 @@ t_stack	*ft_lst_last(t_stack *lst)
 	return (lst);
 }
 
-void	ft_printlist(t_stack **list)
+int	ft_stacksize(t_stack *lst)
 {
-	while (*list)
-	{
-		ft_printf("Num: %d\n", (*list)->content);
-		(*list)= (*list)->next;
-	}
-}
+	size_t	i;
 
-void	ft_print_lst_content(t_stack *node)
-{
-	printf("%d\n", node->content);
+	i = 0;
+	while (lst != NULL)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }

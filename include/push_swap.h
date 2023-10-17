@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:33 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/14 17:48:12 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/17 22:26:56 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ void	ft_printlist(t_stack **list);
 void	ft_print_lst_content(t_stack *node);
 int     check_list(t_stack *lst);
 void    lets_order(t_stack *lst);
+int	ft_stacksize(t_stack *lst);
+void	lstindex(t_stack *lst);
 
 #endif
