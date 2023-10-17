@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:09 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/17 22:27:01 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/17 23:27:39 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_stack	*makelist(char **numbers)
 	i = 0;
 	while (numbers[i])
 	{
-		newnode = ft_newstack(ft_atoi(numbers[i]));
+		newnode = ft_newstack(ft_atol(numbers[i]));
 		ft_lstaddback(&stack, newnode);
 		i++;
 	}
