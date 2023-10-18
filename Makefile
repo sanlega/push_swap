@@ -6,7 +6,7 @@
 #    By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/22 04:46:35 by slegaris          #+#    #+#              #
-#    Updated: 2023/10/17 22:05:24 by slegaris         ###   ########.fr        #
+#    Updated: 2023/10/18 19:04:42 by slegaris         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS = $(SRC_DIR)/main.c\
        $(SRC_DIR)/order.c\
        $(SRC_DIR)/index.c\
        $(SRC_DIR)/lists_utils.c\
+       $(SRC_DIR)/moves.c\
 	   
 OBJS = $(SRCS:.c=.o)
 
