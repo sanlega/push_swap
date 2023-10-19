@@ -6,7 +6,7 @@
 #    By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/22 04:46:35 by slegaris          #+#    #+#              #
-#    Updated: 2023/10/19 18:35:30 by slegaris         ###   ########.fr        #
+#    Updated: 2023/10/19 19:51:52 by slegaris         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ LIBFT = libft
 LIBFT_LIB = $(LIBFT)/libft.a
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror 
 
 all: $(NAME)
 
@@ -63,4 +63,8 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+asan: CFLAGS += -fsanitize=address
+asan: CFLAGS += -g3
+asan: re
+
+.PHONY: all clean fclean re asan
