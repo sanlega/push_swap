@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:33 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/19 07:09:27 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:34:02 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ void	sort2(t_stack **lst);
 void	sort3(t_stack **lst);
 void	sort4(t_stack **lst, t_stack **b);
 void	sort5(t_stack **lst, t_stack **b);
+void	ft_stackclear(t_stack **lst);
 
 #endif

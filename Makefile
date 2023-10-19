@@ -6,7 +6,7 @@
 #    By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/22 04:46:35 by slegaris          #+#    #+#              #
-#    Updated: 2023/10/19 02:18:57 by slegaris         ###   ########.fr        #
+#    Updated: 2023/10/19 18:35:30 by slegaris         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ LIBFT = libft
 LIBFT_LIB = $(LIBFT)/libft.a
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
 
 all: $(NAME)
 

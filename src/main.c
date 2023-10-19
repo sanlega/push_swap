@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:09 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/19 07:03:39 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:34:53 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,11 @@ int	main(int argc, char **argv)
 		i++;
 	}
 	lst = makelist(argv +1);
+	if (!*argv[1])
+		ft_error();
 	if (check_list(lst))
 		ft_start(&lst, &b);
+	ft_stackclear(&lst);
+	ft_stackclear(&b);
 	return (0);
 }
