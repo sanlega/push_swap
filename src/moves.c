@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 17:00:13 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/18 20:31:47 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 02:15:56 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ void	ft_push(t_stack **from_lst, t_stack **to_lst)
 void    ft_pb(t_stack **lst, t_stack **b)
 {
 	ft_push(lst, b);
-	ft_printf("pa\n");
+	ft_printf("pb\n");
 }
 
 void    ft_pa(t_stack **lst, t_stack **b)
 {
 	ft_push(b, lst);
-	ft_printf("pb\n");
+	ft_printf("pa\n");
 }
 
 void    ft_ra(t_stack **lst)

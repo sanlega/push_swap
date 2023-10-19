@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:09 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/18 23:35:59 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 06:57:33 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,32 @@
 void	ft_start(t_stack **lst, t_stack **b)
 {
 	lstindex(*lst);
-	lets_order(*lst, *b);
+	if (ft_stacksize(*lst) == 2)
+		sort2(lst);
+	if (ft_stacksize(*lst) == 3)
+		sort3(lst);
+	if (ft_stacksize(*lst) == 4)
+		sort4(lst, b);
+	if (ft_stacksize(*lst) == 5)
+		sort5(lst, b);
+	else
+		lets_order(lst, b);
 }
 
 t_stack	*makelist(char **numbers)
 {
-	int		i;
-	t_stack	*newnode;
-	t_stack	*stack;
-	long long int	carlos;
+	int				i;
+	t_stack			*newnode;
+	t_stack			*stack;
+	long long int	atolcheck;
 
 	stack = NULL;
 	i = 0;
-	carlos = 0;
+	atolcheck = 0;
 	while (numbers[i])
 	{
-		carlos = ft_atol(numbers[i]);
-		if (carlos > INT_MAX || carlos < INT_MIN)
+		atolcheck = ft_atol(numbers[i]);
+		if (atolcheck > INT_MAX || atolcheck < INT_MIN)
 			ft_error();
 		newnode = ft_newstack(ft_atol(numbers[i]));
 		ft_lstaddback(&stack, newnode);
@@ -64,6 +73,6 @@ int	main(int argc, char **argv)
 	lst = makelist(argv +1);
 	if (check_list(lst))
 		ft_start(&lst, &b);
-		// lets_order(lst);
+	// ft_printlist(&lst);
 	return (0);
 }
