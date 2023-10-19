@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 02:19:02 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/19 07:03:13 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:41:29 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,15 +73,10 @@ void	sort4(t_stack **lst, t_stack **b)
 void	sort5(t_stack **lst, t_stack **b)
 {
 	int	min;
-	int	bool;
 
 	min = get_smallest(*lst);
-	bool = 0;
 	if (ft_lst_last(*lst)->index == min)
-	{
 		ft_rra(lst);
-		bool = 1;
-	}
 	else
 	{
 		while ((*lst)->index != min)
