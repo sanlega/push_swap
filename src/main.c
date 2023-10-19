@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:09 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/19 19:12:02 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 19:25:11 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ t_stack	*makelist(char **numbers)
 	while (numbers[i])
 	{
 		atolcheck = ft_atol(numbers[i]);
-		if (atolcheck > INT_MAX || atolcheck < INT_MIN)
+		if (numbers[i][0] == '\0' || atolcheck > INT_MAX
+			|| atolcheck < INT_MIN)
 			ft_error(&stack);
 		newnode = ft_newstack(ft_atol(numbers[i]));
 		ft_lstaddback(&stack, newnode);
