@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:33 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/19 18:34:02 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 19:09:21 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	ft_pb(t_stack **lst, t_stack **b);
 void	ft_rra(t_stack **lst);
 void	ft_sa(t_stack **lst);
 int		is_ordered(t_stack *lst);
-void	ft_error(void);
+void	ft_error(t_stack **lst);
 void	sort2(t_stack **lst);
 void	sort3(t_stack **lst);
 void	sort4(t_stack **lst, t_stack **b);
