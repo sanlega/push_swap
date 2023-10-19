@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 17:30:09 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/19 06:57:33 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 07:03:39 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	main(int argc, char **argv)
 {
 	int		i;
 	t_stack	*lst;
-	t_stack *b;
+	t_stack	*b;
 
 	lst = NULL;
 	b = NULL;
@@ -73,6 +73,5 @@ int	main(int argc, char **argv)
 	lst = makelist(argv +1);
 	if (check_list(lst))
 		ft_start(&lst, &b);
-	// ft_printlist(&lst);
 	return (0);
 }

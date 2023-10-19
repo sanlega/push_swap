@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 02:14:57 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/19 05:30:19 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 07:01:48 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_sa(t_stack **lst)
 {
-    t_stack	*first;
-    t_stack	*second;
+	t_stack	*first;
+	t_stack	*second;
 
 	if (*lst == NULL || (*lst)->next == NULL)
-		return;
+		return ;
 	first = *lst;
 	second = first->next;
 	first->next = second->next;
@@ -29,9 +29,9 @@ void	ft_sa(t_stack **lst)
 
 void	ft_rra(t_stack **lst)
 {
-	t_stack *first_node;
-	t_stack *penul_node;
-	t_stack *last_node;
+	t_stack	*first_node;
+	t_stack	*penul_node;
+	t_stack	*last_node;
 
 	first_node = *lst;
 	penul_node = *lst;

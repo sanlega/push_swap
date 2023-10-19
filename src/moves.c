@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 17:00:13 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/19 02:15:56 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 07:05:30 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_push(t_stack **from_lst, t_stack **to_lst)
 {
 	t_stack	*tmp;
 	t_stack	*head_from;
-	t_stack *head_to;
+	t_stack	*head_to;
 
 	if (!from_lst || !*from_lst)
 		return ;
@@ -25,7 +25,7 @@ void	ft_push(t_stack **from_lst, t_stack **to_lst)
 	if (!*to_lst)
 	{
 		if (!(*from_lst)->next)
-			tmp = NULL;	
+			tmp = NULL;
 		else
 			tmp = head_from->next;
 		*to_lst = head_from;
@@ -40,21 +40,21 @@ void	ft_push(t_stack **from_lst, t_stack **to_lst)
 	*from_lst = tmp;
 }
 
-void    ft_pb(t_stack **lst, t_stack **b)
+void	ft_pb(t_stack **lst, t_stack **b)
 {
 	ft_push(lst, b);
 	ft_printf("pb\n");
 }
 
-void    ft_pa(t_stack **lst, t_stack **b)
+void	ft_pa(t_stack **lst, t_stack **b)
 {
 	ft_push(b, lst);
 	ft_printf("pa\n");
 }
 
-void    ft_ra(t_stack **lst)
+void	ft_ra(t_stack **lst)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 	t_stack	*end_lst;
 
 	tmp = (*lst)->next;

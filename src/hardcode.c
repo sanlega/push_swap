@@ -6,7 +6,7 @@
 /*   By: slegaris <slegaris@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 02:19:02 by slegaris          #+#    #+#             */
-/*   Updated: 2023/10/19 06:57:19 by slegaris         ###   ########.fr       */
+/*   Updated: 2023/10/19 07:03:13 by slegaris         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int	get_smallest(t_stack *lst)
 {
-	int min_val;
+	int	min_val;
 
 	min_val = INT_MAX;
 	while (lst)
 	{
-        if (lst->index < min_val)
-            min_val = lst->index;
-        lst = lst->next;
-    }
-    return (min_val);
+		if (lst->index < min_val)
+			min_val = lst->index;
+		lst = lst->next;
+	}
+	return (min_val);
 }
 
 void	sort2(t_stack **lst)
@@ -34,9 +34,9 @@ void	sort2(t_stack **lst)
 void	sort3(t_stack **lst)
 {
 	int	first;
-	int second;
-	int third;
-	
+	int	second;
+	int	third;
+
 	first = (*lst)->index;
 	second = (*lst)->next->index;
 	third = (*lst)->next->next->index;
@@ -91,18 +91,3 @@ void	sort5(t_stack **lst, t_stack **b)
 	sort4(lst, b);
 	ft_pa(lst, b);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
